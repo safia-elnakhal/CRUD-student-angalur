@@ -1,0 +1,18 @@
+
+
+ <h2 class="text-center">Add Student</h2>
+<div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">ID</span>
+    <input type="text" [(ngModel)]="std.id" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+  
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1"> Name</span>
+    <input type="text" [(ngModel)]="std.name" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Age</span>
+    <input type="text" [(ngModel)]="std.age" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+
+  <button class="btn btn-dark" (click)="save()">Save</button>

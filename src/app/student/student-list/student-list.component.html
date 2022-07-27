@@ -1,0 +1,41 @@
+<div class="container py-5 my-5">
+        <h2 class="text-center">Student Table</h2>
+<table class="table table-dark table-striped">
+    
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>UPDATE</th>
+            <th>DELETE</th>
+          
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of students">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.age}}</td>
+            <td>
+                <!-- <button class="btn btn-light" (click)="changeIdToEdit(item.id)">Edit</button> -->
+                <button class="btn btn-light" (click)="changeIdToEdit(item.id)">Edit</button> 
+            </td>
+            <td>
+                <button class="btn btn-light">Delete</button>
+            </td>
+        </tr>
+    
+    </tbody>
+  </table>
+
+  <br>
+<br>
+  <app-student-add></app-student-add>
+ <app-student-edit [id]="studetIdToEdit" *ngIf="stdser.eflag"></app-student-edit>
+</div>
+
+
+<!-- <app-student-add (studentAdded)="addToList($event)"></app-student-add> -->
+
+
